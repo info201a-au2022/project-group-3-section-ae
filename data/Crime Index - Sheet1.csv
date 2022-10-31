@@ -1,0 +1,143 @@
+Rank,Country,Crime Index,Safety Index
+1,Venezuela,83.16,16.84
+2,Papua New Guinea,80.26,19.74
+3,Afghanistan,78.19,21.81
+4,South Africa,75.37,24.63
+5,Honduras,74.66,25.34
+6,Trinidad And Tobago,70.57,29.43
+7,Guyana,68.93,31.07
+8,Jamaica,68.29,31.71
+9,El Salvador,67.59,32.41
+10,Syria,67.47,32.53
+11,Peru,67.24,32.76
+12,Brazil,66.79,33.21
+13,Angola,66.66,33.34
+14,Somalia,66.41,33.59
+15,Cameroon,65.26,34.74
+16,Namibia,64.97,35.03
+17,Nigeria,64.09,35.91
+18,Argentina,64.09,35.91
+19,Bangladesh,63.06,36.94
+20,Mozambique,62.94,37.06
+21,Bahamas,62.91,37.09
+22,Puerto Rico,61.77,38.23
+23,Dominican Republic,61.49,38.51
+24,Us Virgin Islands,61.24,38.76
+25,Libya,60.59,39.41
+26,Zimbabwe,59.61,40.39
+27,Colombia,58.71,41.29
+28,Bolivia,58.44,41.56
+29,North Korea,58.07,41.93
+30,Guatemala,57.99,42.01
+31,Ecuador,57.87,42.13
+32,Belarus,57.18,42.82
+33,Fiji,57.09,42.91
+34,Chile,56.51,43.49
+35,Kenya,56.33,43.67
+36,Kyrgyzstan,55.88,44.12
+37,Tanzania,55.79,44.21
+38,Uganda,55.59,44.41
+39,Maldives,55.13,44.87
+40,Mongolia,54.46,45.54
+41,France,54.39,45.61
+42,Malaysia,54.37,45.63
+43,Mexico,53.9,46.1
+44,Costa Rica,53.86,46.14
+45,Botswana,53.7,46.3
+46,Algeria,53.25,46.75
+47,Kazakhstan,53.04,46.96
+48,Uruguay,52.13,47.87
+49,Belize,51.97,48.03
+50,Cambodia,51.72,48.28
+51,Iran,49.75,50.25
+52,Ethiopia,49.42,50.58
+53,Paraguay,49.01,50.99
+54,Mauritius,48.78,51.22
+55,Sweden,48.77,51.23
+56,United States,48.41,51.59
+57,Nicaragua,48.1,51.9
+58,Greece,47.97,52.03
+59,Myanmar,47.83,52.17
+60,Moldova,47.43,52.57
+61,Morocco,47.37,52.63
+62,Albania,47.01,52.99
+63,Barbados,46.94,53.06
+64,Belgium,46.71,53.29
+65,Zambia,46.64,53.36
+66,United Kingdom,46.62,53.38
+67,Egypt,46.61,53.39
+68,Lebanon,46.59,53.41
+69,Ukraine,46.57,53.43
+70,Ghana,46.25,53.75
+71,Italy,46.24,53.76
+72,Iraq,46.17,53.83
+73,Indonesia,46.06,53.94
+74,Ireland,45.87,54.13
+75,Vietnam,45.76,54.24
+76,Sudan,45.59,54.41
+77,Australia,44.83,55.17
+78,New Zealand,44.61,55.39
+79,India,44.57,55.43
+80,Tunisia,43.94,56.06
+81,Malta,43.72,56.28
+82,Canada,43.63,56.37
+83,Panama,43.61,56.39
+84,Kosovo (Disputed Territory),43.41,56.59
+85,Bosnia And Herzegovina,42.71,57.29
+86,Philippines,42.36,57.64
+87,Palestine,41.91,58.09
+88,Pakistan,41.56,58.44
+89,Jordan,41.01,58.99
+90,North Macedonia,40.97,59.03
+91,Sri Lanka,40.97,59.03
+92,Montenegro,40.39,59.61
+93,Turkey,39.89,60.11
+94,Russia,39.32,60.68
+95,Thailand,38.92,61.08
+96,Latvia,38.49,61.51
+97,Bulgaria,38.37,61.63
+98,Serbia,38.18,61.82
+99,Nepal,37.77,62.23
+100,Germany,37.01,62.99
+101,Luxembourg,35.58,64.42
+102,Spain,34.97,65.03
+103,Hungary,33.91,66.09
+104,Uzbekistan,33.68,66.32
+105,Norway,33.51,66.49
+106,Kuwait,33.01,66.99
+107,Lithuania,32.55,67.45
+108,Romania,32.5,67.5
+109,Israel,32.18,67.82
+110,Poland,32.13,67.87
+111,Azerbaijan,31.73,68.27
+112,Cuba,31.72,68.28
+113,Portugal,31.53,68.47
+114,Cyprus,31.06,68.94
+115,Slovakia,30.54,69.46
+116,Brunei,29.55,70.45
+117,China,28.82,71.18
+118,Netherlands,27.57,72.43
+119,Singapore,27.22,72.78
+120,Finland,26.84,73.16
+121,Austria,26.82,73.18
+122,Denmark,26.34,73.66
+123,South Korea,26.13,73.87
+124,Czech Republic,25.78,74.22
+125,Rwanda,25.54,74.46
+126,Georgia,25.25,74.75
+127,Bahrain,24.95,75.05
+128,Monaco,24.92,75.08
+129,Saudi Arabia,24.62,75.38
+130,Iceland,24.3,75.7
+131,Estonia,24.14,75.86
+132,Croatia,23.99,76.01
+133,Slovenia,23.17,76.83
+134,Japan,22.24,77.76
+135,Switzerland,22.12,77.88
+136,Armenia,21.75,78.25
+137,Hong Kong,21.62,78.38
+138,Oman,19.72,80.28
+139,Isle Of Man,18.28,81.72
+140,Taiwan,16.15,83.85
+141,United Arab Emirates,14.87,85.13
+142,Qatar,14.15,85.85
