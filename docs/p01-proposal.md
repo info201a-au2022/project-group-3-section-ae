@@ -20,4 +20,18 @@ Finding the best quality of life in a certain country means analyzing and findin
 Some direct stakeholders that are involved in the research of this topic are the individuals in each country and are impacted by crime rate, cost of living, and healthcare. These are things that affect someone living in a country and overall impact their decisions and their community. They are directly affected if there are high crime rates resulting in an unsafe environment, and they are also adding risk. In addition, the cost of living can typically be harmful to the individual if it's high, as it is harder to buy living necessities like food, water, and shelter. Lower cost of living areas tend to be better for people as they can pay for their needs but also have some extra money to use on other activities. Lastly, healthcare and accessibility in an area plays a big role in the community as it has the potential to make individuals feel valued and taken care of with healthcare aids.
 
 ### Indirect Stakeholders
-Some indirect stakeholders that are involved are the governments of each given country. In addition with high crime rates, cost of living and bad healthcare, more citizens are frustrated and they are the ones who need to figure out a way to establish better systems. If the people aren't happy the government is in charge to take care of them and create a working atmosphere. 
+Some indirect stakeholders that are involved are the governments of each given country. In addition with high crime rates, cost of living and bad healthcare, more citizens are frustrated and they are the ones who need to figure out a way to establish better systems. If the people aren't happy the government is in charge to take care of them and create a working atmosphere.
+
+### Human Values  
+In addition, some human values consist of accessibility, safety, fun, and valued citizens in a certain country. These qualities all makeup what a good quality of life encompasses and what humans value when they move to a new place. Someone should feel as though they can live comfortably without worrying about things that are unintentionally harmful to them. Having accessible help, food, healthcare, and activities allows people to have fun and not have underlying stress about things they cannot control.
+
+### Potential Benefits  
+Some potential benefits of this are creating an atmosphere where people have the best conditions and can live their lives to the fullest . It will create a strong community within each country and increase human population, and accessibility which is an enormous aspect of living. More people will be attended to if they are sick and have a better chance of surviving disease. In addition, the economy will increase and more will feel inclined to come live in that area.
+
+### Potential Harms
+Lastly, some potential harm could be a country’s image, economy, and population. If the crime rates are really bad in an area and are broadcasted to the world many will assume that it is an unsafe area and won’t think about coming to live there. Not only does this scare others away but it affects the job market for people, and in the long term affects the economy of the country. All these aspects depend on each other and are affected when one thing goes wrong.  
+
+ ### References
+1) [Reference 1]( https://www.william-russell.com/blog/safest-countries-in-the-world-for-expats/)
+2) [Reference 2](https://www.usnews.com/news/best-countries/rankings/quality-of-life)
+3) [Reference 3](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)30994-2/fulltext)
