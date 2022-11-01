@@ -1,5 +1,6 @@
 # Project Quality-Life
 ## Project Proposal: Quality of Life Aspects
+### Authors: Daphni George (daphng@uw.edu), Trisha Thonupunoori (trishatt@uw.edu), Aradhana Muthabatulla (amutha@uw.edu)
 ### INFO-201: Technical Foundations of Informatics - The Information School -University of Washington
 ### Autumn 2022
 
