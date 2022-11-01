@@ -31,7 +31,29 @@ Some potential benefits of this are creating an atmosphere where people have the
 ### Potential Harms
 Lastly, some potential harm could be a country’s image, economy, and population. If the crime rates are really bad in an area and are broadcasted to the world many will assume that it is an unsafe area and won’t think about coming to live there. Not only does this scare others away but it affects the job market for people, and in the long term affects the economy of the country. All these aspects depend on each other and are affected when one thing goes wrong.  
 
- ### References
+### References
 1) [Reference 1]( https://www.william-russell.com/blog/safest-countries-in-the-world-for-expats/)
 2) [Reference 2](https://www.usnews.com/news/best-countries/rankings/quality-of-life)
 3) [Reference 3](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)30994-2/fulltext)
+
+## **_Research Questions_**   
+Research Q1 (Crime Rates):Which countries offer the best security for its people?
+Research Q2: (Cost of Living): Which countries have the most affordable cost of living?
+Research Q3: (Healthcare): Which countries have the most viable healthcare?
+
+1) Crime rates are important because it enables us to determine if we are safe in our surroundings and should be considered while choosing which country to live in. Based on the rate in your country, this means higher crime rates equal to higher chances of extra care. If the statistics are low for a particular country, then there’s a need for less assistance. This research aspect impacts how we live life and motivates us to stay safe.
+2) Cost of living is another main issue we all think of these days. The ranking of the countries is a good indicator of where we should live and how we can live life financially. This is especially important because everyone needs to know how they spend their finances daily.  This eventually could have a major impact on our emotions and happiness. Depending on higher rankings, this would motivate yourself to more job opportunities and higher salaries in the future.
+3) Healthcare is an essential preventative mechanism for reducing illness and the severity of illness financially across populations. Increased healthcare aids in the improvement and enjoyment of our lives. Without great services around the world, we wouldn’t have been able to live with the choices we have. In general, healthcare motivates us to live a longer life in the healthiest way possible.
+
+## **_Datasets_**
+*Dataset 1: Crime Rates*  
+The crime rates dataset relates to our problem domain as it is one of the specific factors we decided to analyze when it comes to the quality of life in a specific country.  The crime rates dataset includes data on the crime index for each country as well as that country's safety index. This dataset will help answer the research question about which country has the safest environment in regards to criminal activity.
+
+*Dataset 2: Cost of Living:*  
+The cost of living dataset relates to our problem domain as it's another one of the factors that we are analyzing to determine the quality of life in each country. The cost of living datasets are based off of New York City's cost of living. It will help answer the research question which country has the most affordable living environment
+
+*Dataset 3: Healthcare Index:*  
+The healthcare dataset relates to our problem domain as it examines the healthcare aspect of the quality of life in a country. The dataset ranks each country on its healthcare index. This dataset will help answer which country is able to provide the best healthcare to its citizens by analyzing the healthcare indexes.
+
+*Dataset 4: Healthcare Expenditure:*  
+The healthcare expenditures relate to our problem domain because it helps answer the question which country has the most affordable healthcare. This dataset shows how much out of pocket expenditure for healthcare occurs in each country. The dataset and the healthcare index dataset together will help answer the question which countries have the most viable healthcare based on quality service and price.
