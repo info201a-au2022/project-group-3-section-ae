@@ -60,7 +60,5 @@ The healthcare expenditures relate to our problem domain because it helps answer
 
 *Table: Dataset Information*
 | Name of Data File | Number of Observations | Number of Variables | Citation and URLs|
-| ----------------- | -----------------------| ------------------- | ---------------- |
-|  Crime Index by   |
-   Country 2022
-   Mid-Year    
+| ------------------------------------- | -----------------------| ------------------- | ---------------- |
+|  Crime Index by Country 2022 Mid-Year    
