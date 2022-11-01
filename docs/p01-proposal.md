@@ -61,4 +61,4 @@ The healthcare expenditures relate to our problem domain because it helps answer
 *Table: Dataset Information*
 | Name of Data File | Number of Observations | Number of Variables | Citation and URLs|
 | ------------------------------------- | -----------------------| ------------------- | ---------------- |
-|  Crime Index by Country 2022 Mid-Year    
+|  Crime Index by Country 2022 Mid-Year | 142                    | 4                   |Numbeo. (2022). Crime. Cost of Living. Retrieved October 30, 2022, from https://www.numbeo.com/crime/rankings_by_country.jsp
