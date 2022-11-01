@@ -63,3 +63,4 @@ The healthcare expenditures relate to our problem domain because it helps answer
 | ------------------------------------- | -----------------------| ------------------- | ---------------- |
 |  Crime Index by Country 2022 Mid-Year | 142                    | 4                   |Numbeo. (2022). Crime. Cost of Living. Retrieved October 30, 2022, from https://www.numbeo.com/crime/rankings_by_country.jsp
 | Cost of Living Index by Country 2022 Mid-Year | 137            | 8                   | Numbeo. (2022). Cost of living. Cost of Living. Retrieved October 30, 2022, from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp
+| Health Care Index by Country 2022 Mid-Year| 96 | 4 | Health care. Cost of Living. (2022). Retrieved October 30, 2022, from https://www.numbeo.com/health-care/rankings_by_country.jsp
