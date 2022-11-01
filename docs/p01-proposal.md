@@ -46,19 +46,19 @@ Research Q3: (Healthcare): Which countries have the most viable healthcare?
 3) Healthcare is an essential preventative mechanism for reducing illness and the severity of illness financially across populations. Increased healthcare aids in the improvement and enjoyment of our lives. Without great services around the world, we wouldn’t have been able to live with the choices we have. In general, healthcare motivates us to live a longer life in the healthiest way possible.
 
 ## **_Datasets_**
-*Dataset 1: Crime Rates*  
+**Dataset 1: Crime Rates**  
 The crime rates dataset relates to our problem domain as it is one of the specific factors we decided to analyze when it comes to the quality of life in a specific country.  The crime rates dataset includes data on the crime index for each country as well as that country's safety index. This dataset will help answer the research question about which country has the safest environment in regards to criminal activity.
 
-*Dataset 2: Cost of Living:*  
+**Dataset 2: Cost of Living:**    
 The cost of living dataset relates to our problem domain as it's another one of the factors that we are analyzing to determine the quality of life in each country. The cost of living datasets are based off of New York City's cost of living. It will help answer the research question which country has the most affordable living environment
 
-*Dataset 3: Healthcare Index:*  
+**Dataset 3: Healthcare Index:**  
 The healthcare dataset relates to our problem domain as it examines the healthcare aspect of the quality of life in a country. The dataset ranks each country on its healthcare index. This dataset will help answer which country is able to provide the best healthcare to its citizens by analyzing the healthcare indexes.
 
-*Dataset 4: Healthcare Expenditure:*  
+**Dataset 4: Healthcare Expenditure:**
 The healthcare expenditures relate to our problem domain because it helps answer the question which country has the most affordable healthcare. This dataset shows how much out of pocket expenditure for healthcare occurs in each country. The dataset and the healthcare index dataset together will help answer the question which countries have the most viable healthcare based on quality service and price.
 
-*Table: Dataset Information*
+**Table: Dataset Information**
 | Name of Data File | Number of Observations | Number of Variables | Citation and URLs|
 | ------------------------------------- | -----------------------| ------------------- | ---------------- |
 |  Crime Index by Country 2022 Mid-Year | 142                    | 4                   |Numbeo. (2022). Crime. Cost of Living. Retrieved October 30, 2022, from https://www.numbeo.com/crime/rankings_by_country.jsp
@@ -66,10 +66,10 @@ The healthcare expenditures relate to our problem domain because it helps answer
 | Health Care Index by Country 2022 Mid-Year| 96 | 4 | Health care. Cost of Living. (2022). Retrieved October 30, 2022, from https://www.numbeo.com/health-care/rankings_by_country.jsp
 | Out-of-pocket expenditure per capita on healthcare, 2019 | 4035 | 5 | Out-of-pocket expenditure per capita on healthcare. Our World in Data. (2019). Retrieved October 31, 2022, from https://ourworldindata.org/grapher/out-of-pocket-expenditure-per-capita-on-healthcare
 
-*Where did the first three datasets come from?*             
+**Where did the first three datasets come from?**             
 The first three datasets were collected by Numbeo who gathered their data through surveying people who visit their website. This data was likely collected during 2022 as is seen from the title of their datasets. The Numbeo website explains that the purpose of their datasets is to provide people with a tool to compare and share information about different factors that go into a country’s quality of life. The data collection does not appear to be funded in any way as it claims to not be influenced by the government and has stated that information is collected through the website's visitors survey responses. Countries ranked favorably for low crime indexes are likely to benefit from this data. Likewise countries with good cost of living and affordable healthcare will likely benefit as well.  Additionally many newspapers and magazines such as BBC, Forbes and Business Insider  have used this data. The data has already been stated to come from survey responses however the website also states they filter spam responses as in answers that stray from the median number, they also say they use data up to 36 months old. We believe it's credible and trustworthy since it's not government influenced, it's based off of filtered users' responses and is put through a programmed formula to calculate the different indexes for the respective datasets. I obtained the datasets originally through another website. We then traced the source of that website's datasets to Numbeo which is where we downloaded the data into CSV files.
 
-*Where did the healthcare expenditure dataset come from?*         
+**Where did the healthcare expenditure dataset come from?**         
 This dataset came from a website called Our World in Data who got this data from the world health organization. This data was collected likely in 2019 as that's the year the data is represented for. The Our World in Data explains that the purpose of all their datasets is to make the knowledge in datasets accessible and understandable. The data collection is funded through grants and readers' donations. The countries with lower health expenditures probably benefit from this as their healthcare systems look more attractive to a taxpayer's eyes. The work done through this organization is often used in different science journals such as Science and Nature. The dataset however is credited to come from the world health organization. We believe it's credible and trustworthy as it's from a highly reputable source. We obtained the dataset while we were searching for healthcare payments for each country.
 
 ## **_Expected Implications_**  
