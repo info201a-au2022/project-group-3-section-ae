@@ -57,3 +57,10 @@ The healthcare dataset relates to our problem domain as it examines the healthca
 
 *Dataset 4: Healthcare Expenditure:*  
 The healthcare expenditures relate to our problem domain because it helps answer the question which country has the most affordable healthcare. This dataset shows how much out of pocket expenditure for healthcare occurs in each country. The dataset and the healthcare index dataset together will help answer the question which countries have the most viable healthcare based on quality service and price.
+
+*Table: Dataset Information*
+| Name of Data File | Number of Observations | Number of Variables | Citation and URLs|
+| ----------------- | -----------------------| ------------------- | ---------------- |
+|  Crime Index      |
+|  by Country       |
+|  2022 Mid-Year    |
