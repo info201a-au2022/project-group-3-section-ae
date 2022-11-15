@@ -59,3 +59,14 @@ scatterplot <- ggplot(data=df_cost_of_living, aes(x=Groceries.Index, y=Cost.of.L
 scatterplot + labs(title = "                                Cost of Food in North and South America")
 print(scatterplot)
 ```
+```{r kable_example, echo = FALSE}
+library("knitr") # make sure you load the package (once per document)
+
+data <- read.csv("/Users/daphnigeorge/Downloads/New_final_dataset - Sheet1.csv")
+data<- data %>% 
+ mutate_if(is.numeric, round)
+data <- data %>% group_by(Health.Care.Index) 
+df <- data.frame( Health.Care.Index = data['Health.Care.Index'],Country = data["Country"], cost_of_living = data["Safety.Index"])
+
+kable(df)
+```
