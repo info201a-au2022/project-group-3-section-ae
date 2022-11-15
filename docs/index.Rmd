@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-```{r, echo  = FALSE}
+```{r echo  = FALSE}
 # Example 1: Note relative path, which can be read: Up one
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
@@ -26,7 +26,7 @@ We included this map because it compared North and South American's Healthcare I
 ```
 
 
-```{r, echo  = FALSE}
+```{r echo  = FALSE}
 # Example 1: Note relative path, which can be read: Up one
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
@@ -37,12 +37,12 @@ print(crime(da))
 
 ### Chart 2: Crime Index Bar Graph
 ```
-This bar graph depicts the crime and safety of countries in North and South America. The lower the crime rate, the higher safety a country has. The X axis is the crime index which shows the value of how much crime occured in each of the 17 countries. The Y is our dependent variable and represents the different countries in the South and North Amereica regions.The key on the right represents the safety index where it shows countries that are safest on the range from 20 to 50 above. The lighter the color, the more safer it is to live in.
+We chose to include a bar graph for this dataset because it allows us to easily make observations about crime and safety rates of countries in North & South America. The lower the crime rate, the higher safety a country has. The X axis is the crime index which shows the value of how much crime occurred in each of the 17 countries. The Y is our dependent variable which represents the different countries to compare the crime rate and safety rate. The key on the right, safety index, shows a range of 20 to 50+ rates which illustrates the breakdown of colors where the lighter being the safest to live in. These components and information reveal that Panama has the lowest crime rate which means that it’s the safest to live in (highest rate of safety index).
 
 ```
 
 
-```{r, echo  = FALSE}
+```{r echo  = FALSE}
 # Example 1: Note relative path, which can be read: Up one
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
