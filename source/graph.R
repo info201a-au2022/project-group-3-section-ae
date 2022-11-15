@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 
 crime <- function(data) {
-df_crime <- select(final_dataset, 1,4,5)
+df_crime <- select(data, 1,4,5)
 
 my_bar_graph <- ggplot(df_crime, aes(x = Crime.Index, y = Country, fill = Safety.Index)) +
   geom_col() 
