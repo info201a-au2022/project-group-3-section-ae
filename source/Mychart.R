@@ -8,8 +8,7 @@ create <- function(data) {
   countryPlot <- ggplot()+geom_polygon(data=data,aes(x=long, y=lat, group = group, fill=Health.Care.Index))+coord_map()
   countryPlot<- countryPlot + labs(title = "Healthcare Index in North & South America") +
     theme(plot.title = element_text(face="bold", size=15)) 
-  print(countryPlot)
-  
+
   
 }
 
