@@ -9,49 +9,50 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is this file for?
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
 
-* Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
+```{r, echo  = FALSE}
 # Example 1: Note relative path, which can be read: Up one
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
 source("../source/Mychart.R")
-create()
-```
-
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-library(dplyr)
 da <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
-
-msg <- create(da)
+print(create(da))
 ```
 
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+### Chart 1: Healthcare Index Map
+```
+We included this map because it compared North and South American's Healthcare Index in an easy, clear manner. A note to keep in mind is that the Healthcare Index essentially is an estimate of the overall quality of the healthcare system. From the map above we can see that the worst healthcare index is present in South America. The South American continent overall has the worse healthcare indexes as we can tell from the darker colors. In North America intrestingly enough the United States has the worst Healthcare Index as shown by the darker hue.  
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r, echo  = FALSE}
+# Example 1: Note relative path, which can be read: Up one
+# directory(..), down into source (/source), and 
+# then "source" an R file (data_access.R)
+source("../source/graph.R")
+da <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+print(crime(da))
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Chart 2: Crime Index Bar Graph
+```
+This bar graph depicts the crime and safety of countries in North and South America. The lower the crime rate, the higher safety a country has. The X axis is the crime index which shows the value of how much crime occured in each of the 17 countries. The Y is our dependent variable and represents the different countries in the South and North Amereica regions.The key on the right represents the safety index where it shows countries that are safest on the range from 20 to 50 above. The lighter the color, the more safer it is to live in.
+
+```
+
+
+```{r, echo  = FALSE}
+# Example 1: Note relative path, which can be read: Up one
+# directory(..), down into source (/source), and 
+# then "source" an R file (data_access.R)
+source("../source/group project chart.R")
+da <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+print(cost_of_living(da))
+```
+
+### Chart 3: Cost of Living Scatter Plot
+```
+This scatterplot indicates where each country stands within their cost of living index and their grocery index. A grocery index is an estimation of grocery prices in a given location compared to New York City. The cost of living index is the minimum amount of money it takes to live in that area. Some insights wee are able to see is that there is an upward trend within the countries cost of living and they are all rising consistently. With higher prices for groceries and higher cost of living it is harder for citizens to sustain in that country. 
+
+```
