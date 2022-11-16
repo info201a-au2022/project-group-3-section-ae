@@ -36,15 +36,21 @@ country_highest_ratio <- function() {
 
 #Country that has the lowest ratio of cost of living to groceries.
 
-country_lowest_ratio <- final_dataset %>%
-  mutate(ratio = Cost.of.Living.Index/Groceries.Index) %>%
+country_lowest_ratio <- function(){
+  final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+  mutate(final_dataset, ratio = Cost.of.Living.Index/Groceries.Index) %>%
   filter(ratio == min(ratio, na.rm = TRUE)) %>%
-  pull(Country)
+    select(Country) %>%
+    return()
+}
 #Puerto Rico
 
 #Country that has the most affordable healthcare.
 
-most_affordable_healthcare_country <- final_dataset %>%
-  filter(Health.Care.Index == max(Health.Care.Index, na.rm = TRUE)) %>%
-  pull(Country)
+most_affordable_healthcare_country <- function() {
+  final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+  filter(final_dataset, Health.Care.Index == max(Health.Care.Index, na.rm = TRUE)) %>%
+    select(Country) %>%
+    return()
+}
 #Mexico
