@@ -25,10 +25,13 @@ Not_most_safest_country <- function() {
 
 #Country has the highest ratio of cost of living and groceries.
 
-country_highest_ratio <- final_dataset %>%
-  mutate(ratio = Cost.of.Living.Index/Groceries.Index) %>%
+country_highest_ratio <- function() {
+  final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+  mutate(final_dataset, ratio = Cost.of.Living.Index/Groceries.Index) %>%
   filter(ratio == max(ratio, na.rm = TRUE)) %>%
-  pull(Country)
+    select(Country) %>%
+    return()
+}
 #Uruguay
 
 #Country that has the lowest ratio of cost of living to groceries.
