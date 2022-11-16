@@ -6,9 +6,28 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+source("../source/summary_info.R")
+
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Dynamic Paragraph
+
+Through our three data sets, we found 17 countries in North and South America that have data through all three aspects of crime rates, cost of living, and healthcare. Analyzing our sets of data with 17 countries allowed us to find which countries had the best quality of life for their people. Typically lower crime rates, cheaper cost of living and high quality healthcare are all factors that are part of a quality life in a country. Each country varies within these three overarching topics and through our data we are able to compare the differences between countries. For our first data set, we focused on looking at which North and South American country was the safest. When calculated it was revealed that `r Safest_country()` was the safest. On the flip side we also looked at which country had the highest levels of crime so that we could determine the most dangerous North and South American country to live in. Once calculated we found it to be `r Not_most_safest_country()`.Through our second data set which looked at cost_of_living, we found that  `r country_highest_ratio()` had the highest ratio of groceries to cost of living. On the other hand we found that `r country_lowest_ratio()` had the lowest ratio of groceries to cost of living. By finding ratios we were able to see which country was the most costly to live in and which country was not. Through our third and final  data set, we found the country  in the American continents that had the highest quality of healthcare which turned out to be  `r most_affordable_healthcare_country()`. 
+
+
+### Healthcare Grouped Table
+
+```{r echo  = FALSE}
+# Example 1: Note relative path, which can be read: Up one
+# directory(..), down into source (/source), and 
+# then "source" an R file (data_access.R)
+source("../source/table.R")
+da <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+kable(data_p(da))
+```
+
+We included this table because it shows the correlation between the quality of healthcare and the living cost index. By grouping the healthcare index, we have the higher ranked countries at the top and the lower ranked counties at the bottom. This table reveals that a country may be ranked high for healthcare services but their cost of living is quite low as well. This can especially be seen in Argentina case where they have a high healthcare index compared to other countries but have one of the lowest cost of living. 
 
 
 ```{r echo  = FALSE}
@@ -21,9 +40,9 @@ print(create(da))
 ```
 
 ### Chart 1: Healthcare Index Map
-```
+
 We included this map because it compared North and South American's Healthcare Index in an easy, clear manner. A note to keep in mind is that the Healthcare Index essentially is an estimate of the overall quality of the healthcare system. From the map above we can see that the worst healthcare index is present in South America. The South American continent overall has the worse healthcare indexes as we can tell from the darker colors. In North America intrestingly enough the United States has the worst Healthcare Index as shown by the darker hue.  
-```
+
 
 
 ```{r echo  = FALSE}
@@ -36,10 +55,10 @@ print(crime(da))
 ```
 
 ### Chart 2: Crime Index Bar Graph
-```
+
 We chose to include a bar graph for this dataset because it allows us to easily make observations about crime and safety rates of countries in North & South America. The lower the crime rate, the higher safety a country has. The X axis is the crime index which shows the value of how much crime occurred in each of the 17 countries. The Y is our dependent variable which represents the different countries to compare the crime rate and safety rate. The key on the right, safety index, shows a range of 20 to 50+ rates which illustrates the breakdown of colors where the lighter being the safest to live in. These components and information reveal that Panama has the lowest crime rate which means that it’s the safest to live in (highest rate of safety index).
 
-```
+
 
 
 ```{r echo  = FALSE}
@@ -52,7 +71,7 @@ print(cost_of_living(da))
 ```
 
 ### Chart 3: Cost of Living Scatter Plot
-```
+
 This scatterplot indicates where each country stands within their cost of living index and their grocery index. A grocery index is an estimation of grocery prices in a given location compared to New York City. The cost of living index is the minimum amount of money it takes to live in that area. Some insights wee are able to see is that there is an upward trend within the countries cost of living and they are all rising consistently. With higher prices for groceries and higher cost of living it is harder for citizens to sustain in that country. 
 
-```
+
