@@ -6,7 +6,7 @@ data_p<- function(data) {
 data <- data %>% group_by(Health.Care.Index) 
 df <- data.frame( Health.Care.Index = data['Health.Care.Index'],Country = data["Country"], cost_of_living = data["Safety.Index"])
 
-kable(df)
+#kable(df)
 }
 practice <- data_p(data)
-print(practice)
+kable(practice)
