@@ -5,10 +5,12 @@ final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/pro
 
 #Country that is the most safest to live in.
 
-Safest_country <- final_dataset %>%
-  filter(Safety.Index == max(Safety.Index)) %>%
-  pull(Country)
-print(Safest_country)
+Safest_country <- function() {
+  final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+  filter(final_dataset,Safety.Index == max(Safety.Index)) %>%
+    select(Country) %>%
+    return()
+}
 #Panama
 
 #Country that has the most crime.
