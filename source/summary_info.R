@@ -12,7 +12,8 @@ print(Safest_country)
 #Panama
 
 #Country that has the most crime.
-Not_most_safest_country <- function(final_dataset) {
+Not_most_safest_country <- function() {
+  final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
   filter(final_dataset, Crime.Index == max(Crime.Index, na.rm = TRUE)) %>%
   return(Country)
 }
