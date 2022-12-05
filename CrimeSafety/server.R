@@ -13,16 +13,25 @@ library(ggplot2)
 library(dplyr)
 library(plotly)
 #install.packages("shinythemes")
+#install.packages("mapproj")
+#install.packages("maps")
 
 final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
-View(final_dataset)
+#View(final_dataset)
+
+#TODO 
+
+data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+world_coordinates <- map_data("world")
+world_coordinates <- rename(world_coordinates, Country = region)
+data <- inner_join(x = data, y = world_coordinates, by = "Country")
 
 df_crime <- select(final_dataset, 1,4,5)
-View(df_crime)
+#View(df_crime)
 
 # Define server logic required to draw a bargraph
 shinyServer(function(input, output) {
-  output$selectCountry <- renderUI({
+  output$selectCountry1 <- renderUI({
     selectInput("country", "Choose a country:", choices = unique(df_crime$Country))
     
   })
@@ -44,7 +53,7 @@ shinyServer(function(input, output) {
       theme_update() +
       labs(x=  "   Crime Index                Safety Index",
            y = "Values",
-           title = "Crime and Safety in North & South America",
+           title = "Crime and Safety in North, South, & Central America",
            caption = "This bar graph depicts crime & safety rates for countries in North and South America.") +
       theme(plot.title = element_text(face="bold", size=20), 
             axis.title = element_text(face="bold", size = 17), 
@@ -53,8 +62,32 @@ shinyServer(function(input, output) {
   })
   
   
-  output$countryPlot <- renderPlot({
+  output$barGraph <- renderPlot({
     barGraph()
   })
   
+  #secondchart map
+  
+  output$selectCountry <- renderUI({
+    output$value <- renderPrint({ input$slider1 })
+    
+    
+  })
+  
+  plotMap <- reactive({
+    country_selector <- data %>% 
+      filter(Health.Care.Index < input$slider1) %>%
+      pull(Country)
+    plotData <- data %>% 
+      filter(Country %in% country_selector)
+    map <- ggplot(plotData)+geom_polygon(aes(x=long, y=lat, group = group, fill=Health.Care.Index))+coord_map() +
+      labs(title = "Healthcare Index in North & South America") +
+      theme(plot.title = element_text(face="bold", size=15)) 
+    
+    return(map)
+  }) 
+  
+  output$countryPlot <- renderPlot({
+    plotMap()
+  })
 })
