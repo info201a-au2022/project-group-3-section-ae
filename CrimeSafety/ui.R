@@ -8,7 +8,7 @@ navbarPage(
   tabPanel("Chart1",
            titlePanel("Countries"),
            
-           # Sidebar with a slider input for number of bins
+           # Sidebar with a slider input for selecting countries
            sidebarLayout(
              sidebarPanel(
                uiOutput("selectCountry")
