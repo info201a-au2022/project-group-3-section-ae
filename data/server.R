@@ -12,13 +12,18 @@ library(shiny)
 
 library(shiny)
 
+
+
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
-    
+   output$selectCountry <- renderUI({
+     
+  
     output$Region <- renderPrint({ input$radio })
+   })
+   
     
-  })
 scatterPlot <- reactive({
   plotData <- new_chart %>%
     filter(region %in% input$region)
@@ -28,8 +33,10 @@ scatterPlot <- reactive({
   
 })  
 
- output$countryPlot <- renderPlot({
+output$RegionPlot <- renderPlot({
    
    scatterPlot()
    
-   }) 
+})
+
+})
