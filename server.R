@@ -1,49 +1,42 @@
-#
-# This is the server logic of a Shiny web application. You can run the
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
-library(ggplot2)
-library(dplyr)
 library(tidyverse)
-library(plotly)
+library(ggplot2)
 
-data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
-world_coordinates <- map_data("world")
-world_coordinates <- rename(world_coordinates, Country = region)
-data <- inner_join(x = data, y = world_coordinates, by = "Country")
+new_data <- read.csv ("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/Dataset%20with%20Regions%20-%20Sheet1.csv")
+
+data <- read.csv("https://countlove.org/data/data.csv")
+
+
+
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-
-    # You can access the value of the widget with input$slider1, e.g.
-
-  # You can access the values of the second widget with input$slider2, e.g.
-  output$selectCountry <- renderUI({
-    #selectInput("Country", "Choose a Country:", choices = unique(data$Country))
-    output$value <- renderPrint({ input$slider1 })
-    
-    
-    
+  output$selectRegion <- renderUI({
+    selectInput("region", "Choose a region:", choices = unique(new_data$region))
   })
   
-  plotMap <- reactive({
-    country_selector <- data %>% 
-      filter(Health.Care.Index < input$slider1) %>%
-      pull(Country)
-    plotData <- data %>% 
-      filter(Country %in% country_selector)
-    ggplot(plotData)+geom_polygon(aes(x=long, y=lat, group = group, fill=Health.Care.Index))+coord_map() +
-    labs(title = "Healthcare Index in North & South America") +
-    theme(plot.title = element_text(face="bold", size=15)) 
-  }) 
- 
-output$countryPlot <- renderPlot({
-  plotMap()
+  
+  #data <- data %>% 
+    #mutate(states = str_sub(Location, -2, -1)) %>% 
+    #head(500)
+  
+  scatterPlot <- reactive({
+    plotData <- new_data %>% 
+      filter(region %in% input$region)
+    
+    ggplot(plotData, aes(x=Groceries.Index, y=Cost.of.Living.Index)) +
+      geom_point() +
+      labs(x = "Groceries Index",
+           y = "Cost of Living Index", 
+           title = paste("Cost of Food vs Cost of Living", input$region))
+  })
+  
+  output$regionPlot <- renderPlot({
+    scatterPlot()
+  })
+  
+  output$sampleText <- renderText({
+    paste("Hello! Welcome to my sample Shiny web app. This visualization shows a scatter of the number of attendees, depending
+            on the date of the protest and the state it happened in.")
+  })
+  
 })
-})
- 
