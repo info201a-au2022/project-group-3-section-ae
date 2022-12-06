@@ -24,7 +24,7 @@ new_data <- read.csv ("https://raw.githubusercontent.com/info201a-au2022/project
 shinyServer(function(input, output) {
   output$selectCountry1 <- renderUI({
     selectInput("country", "Choose a country:", choices = unique(df_crime$Country))
-
+    
   })
   output$selectCountry <- renderUI({
     #selectInput("Country", "Choose a Country:", choices = unique(data$Country))
@@ -73,10 +73,10 @@ shinyServer(function(input, output) {
   #secondchart map
   
   #output$selectCountry <- renderUI({
-    #selectInput("Country", "Choose a Country:", choices = unique(data$Country))
-    #output$value <- renderPrint({ input$slider1 })
-    
-    
+  #selectInput("Country", "Choose a Country:", choices = unique(data$Country))
+  #output$value <- renderPrint({ input$slider1 })
+  
+  
   #})
   
   plotMap <- reactive({
