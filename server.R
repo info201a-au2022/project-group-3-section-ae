@@ -36,6 +36,7 @@ shinyServer(function(input, output) {
   })
   output$selectRegion <- renderUI({
     selectInput("region", "Choose a region:", choices = unique(new_data$region))
+    #output$value <- renderPrint({ input$region })
   })
   
   
@@ -98,14 +99,24 @@ shinyServer(function(input, output) {
     plotData <- new_data %>% 
       filter(region %in% input$region)
     
-    ggplot(plotData, aes(x=Groceries.Index, y=Cost.of.Living.Index)) +
-      geom_point() +
-      labs(x = "Groceries Index",
-           y = "Cost of Living Index", 
-           title = paste("Cost of Food vs Cost of Living", input$region))
+    #ggplot(plotData, aes(x=Groceries.Index, y=Cost.of.Living.Index)) +
+    #geom_point() +
+    # labs(x = "Groceries Index",
+    # y = "Cost of Living Index", 
+    #title = paste("Cost of Food vs Cost of Living", input$region)) 
+    plot_ly(type = 'scatter', mode = 'markers') %>%
+      add_trace(plotData,
+                x = plotData$Groceries.Index, 
+                y = plotData$Cost.of.Living.Index,
+                text = plotData$Country,
+                hoverinfo = 'text',
+                marker = list(color='green'),
+                showlegend = F
+      )
   })
   
-  output$regionPlot <- renderPlot({
+  
+  output$regionPlot <- renderPlotly({
     scatterPlot()
   })
 })
