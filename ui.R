@@ -2,6 +2,7 @@ library(shiny)
 library(shinythemes)
 library(plotly)
 
+
 navbarPage( theme = shinytheme("darkly"),
             "Quality of Life", 
             tabPanel("Introduction", h1("Overview"),
@@ -19,7 +20,7 @@ navbarPage( theme = shinytheme("darkly"),
                      p("Some potential benefits of this are creating an atmosphere where people have the best conditions and can live their lives to the fullest . It will create a strong community within each country and increase human population, and accessibility which is an enormous aspect of living. More people will be attended to if they are sick and have a better chance of surviving disease. In addition, the economy will increase and more will feel inclined to come live in that area."),
                      h3("Potential Harms"),
                      p("Lastly, some potential harm could be a country’s image, economy, and population. If the crime rates are really bad in an area and are broadcasted to the world many will assume that it is an unsafe area and won’t think about coming to live there. Not only does this scare others away but it affects the job market for people, and in the long term affects the economy of the country. All these aspects depend on each other and are affected when one thing goes wrong."),
-                    
+                     
                      h2("Research Questions"),
                      p("How do crime rates correlate with quality of life index?"),
                      p("How does cost of living vs groceries have an impact on the quality of life?"),
@@ -60,7 +61,7 @@ navbarPage( theme = shinytheme("darkly"),
                        ),
                        # Show a plot of the generated distribution
                        mainPanel(
-                         plotOutput("countryPlot")
+                         plotlyOutput("countryPlot")
                        )
                      ),
                      
@@ -96,8 +97,7 @@ navbarPage( theme = shinytheme("darkly"),
                      h2("Authors"),
                      p("Daphni George, Trisha Thonupunoori, Aradhana M."),
                      h2("Affiliation"),
-                     p("INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
-                     h2("Autumn 2022"),
+                     h2("December 8th, 2022"),
                      h2("Abstract"),
                      p("Our main question is which countries in North, South, and Central America have the best living conditions for its citizens. This question is important because it highlights which countries in those regions have the best and affordable services offered to its people. To address this question, we will focus on three main areas: crime rates, cost of living and healthcare affordability."),
                      h2("Keywords"),
@@ -123,16 +123,12 @@ navbarPage( theme = shinytheme("darkly"),
                      p("How does healthcare have an impact on the quality of life?"),
                      h2("The Dataset"),
                      h2("Findings"),
-                     p("Through our charts and studying our data, we were able to analyze different countries and their aspects, to find the best quality of life in the world. When observing the crime rates, cost of living, and health care within these countries we were able to find some similarities and differences between each region. We compared North, South, and Central American countries and used 18 of them to make our project more concise. Within looking at the crime rates in relation to the quality of life we noticed that through our scatter plot in South America there were around 17 countries that had lower than a $40 groceries and cost of living index. This indicates that most countries within South America have a cheaper cost of living compared to around the world. The population of South America could be higher as considering a more affordable cost of living, more people will resort to living there. But in comparison when looking into North America there is almost a direct opposite of the graph as almost all of the countries are higher than $65 for the grocery and quality of life except one. We can tell that North American countries indicate a much higher cost of living index overall in consideration of the high grocery index as well. Central America has a neutral scatterplot with 3 countries and each in a low, medium, and high level. We can see that a higher cost of living within a country makes it harder for civilians to survive and everything is more expensive. Regarding if healthcare has an impact on the quality of life, we can see that through our map. As indicated, we can see that North America has a better healthcare index as it is lighter in color than South America. In South America, there are mostly medium blue colors with some parts being pretty dark. We can tell by this that in North America healthcare access is better but also has a more expensive cost of living to be sustainable. In South America, there is a cheaper cost of living, and healthcare accessibility is lower as not as much money is being provided for that amenity. With a lower cost of living there is a lower amount of tax on goods and less money can be supplied for healthcare, insurance, and economic amenities. We can see the crime and safety index within these regions as well, looking at the bar graphs. Some South American countries listed have a high crime rate indicating a low safety index. Such as Venezuela and Argentina. Although in North America some countries such as Trinidad and Tobago Dominican Republic also have high crime rates. This, therefore, indicates that there isn’t a strong relationship between healthcare and cost of living affecting crime rates as it is present in both regions. It truly depends on the country and there are high and low crime and safety indexes in both regions. Throughout our charts, we were able to depict certain similarities and understand the reasoning behind how healthcare, crime rates, and cost of living affects certain regions."),
                      h2("Discussion"),
                      h2("Conclusion"),
-                     p("In conclusion, our group chose this topic because we realize that there are many people around the world that are being concerned the people around them, their wellbeing, and the expenses within groceries in their country. Through researching information, data wrangling, creating informative and interactive visualizations, we are able to inform individuals which countries are the safest to live in and that are being impacted by these issues. Each country varied within these three overarching topics, and we compared the differences between the countries that have data for all. Investigating these areas provided us with a solid grasp of how these correlates with each other and determine which country is the safest to live in."),
-                     p("If we could leave our audience with one key point, learn from different information and be cautious of what is going on around you. There are many people around the world that are being concerned the people around them, their wellbeing, and the expenses in their country. The data is not meant to pinpoint specific data that may not accurately depict the reality in the country, but rather to inform, learn about different countries and possibly the right place, especially for people who are having concerns about how they live their life. It is merely a warning sign to the government that this may be a public policy priority. Just because some countries have greater crime rates, higher expenditures on groceries, and poor healthcare services does not imply to cause some sort of harm to the society, but to encourage people in their countries to be cautious about what’s happening around the world."),
-                     p("In this project, we analyzed data that help us answer questions, such as how crime rates correlate with the quality-of-life index, how cost of living vs groceries has an impact on the quality of life and how healthcare has an impact on quality of life. So, this project was to show individuals from North, South, and Central America about finding a country that is the safest to live, in regard to crime rates, cost of living in groceries, and healthcare services. Finally, we were able to learn to analyze & real-world information by data wrangling and creating interactive visualizations to help us better understand this and create a meaningful impact for people who are trying find the right place for them to live in!"),
                      h2("References"),
                      
-                     ),
-          
+            ),
+            
             
             
 )

@@ -17,7 +17,11 @@ world_coordinates <- rename(world_coordinates, Country = region)
 data <- inner_join(x = data, y = world_coordinates, by = "Country")
 df_crime <- select(final_dataset, 1,4,5)
 new_data <- read.csv ("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/Dataset%20with%20Regions%20-%20Sheet1.csv")
-
+df <- read.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv')
+data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
+data$Country[data$Country=="USA"]<-"United States"
+df <- rename(df, Country = COUNTRY)
+df <- inner_join(x = data, y = df, by = "Country")
 #View(df_crime)
 
 # Define server logic required to draw a bargraph
@@ -81,18 +85,35 @@ shinyServer(function(input, output) {
   #})
   
   plotMap <- reactive({
-    country_selector <- data %>% 
+    country_selector <- df %>% 
       filter(Health.Care.Index < input$slider1) %>%
       pull(Country)
-    plotData <- data %>% 
+    plotData <- df %>% 
       filter(Country %in% country_selector)
-    ggplot(plotData)+geom_polygon(aes(x=long, y=lat, group = group, fill=Health.Care.Index))+coord_map() +
-      labs(title = "Healthcare Index in North & South America") +
-      theme(plot.title = element_text(face="bold", size=15)) 
+    
+    l <- list(color = toRGB("grey"), width = 0.5)
+    
+    # specify map projection/options
+    g <- list(
+      showframe = FALSE,
+      showcoastlines = FALSE,
+      projection = list(type = 'Mercator')
+    )
+    
+    fig <- plot_geo(plotData)
+    fig <- fig %>% add_trace(
+      z = plotData$Health.Care.Index, color = plotData$Health.Care.Index., colors = 'Blues',
+      text = ~Country, locations = ~CODE, marker = list(line = l)
+    )
+    fig <- fig %>% colorbar(title = 'Health Care Index')
+    fig <- fig %>% layout(
+      title = 'Health Care Index in the Americas',
+      geo = g
+    )
+    fig
   }) 
   
-  
-  output$countryPlot <- renderPlot({
+  output$countryPlot <- renderPlotly({
     plotMap()
   })
   scatterPlot <- reactive({
