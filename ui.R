@@ -1,7 +1,8 @@
 library(shiny)
 library(shinythemes)
 library(plotly)
-datasets <- read_csv("/Users/daphnigeorge/Downloads/Datasets - Sheet1.csv")
+library(readr)
+datasets <- read_csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/Datasets%20-%20Sheet1.csv")
 
 navbarPage( theme = shinytheme("darkly"),
             "Quality of Life", 
@@ -22,6 +23,14 @@ navbarPage( theme = shinytheme("darkly"),
                      h3("Potential Harms"),
                      p("Lastly, some potential harm could be a country’s image, economy, and population. If the crime rates are really bad in an area and are broadcasted to the world many will assume that it is an unsafe area and won’t think about coming to live there. Not only does this scare others away but it affects the job market for people, and in the long term affects the economy of the country. All these aspects depend on each other and are affected when one thing goes wrong."),
                      h2("Datasets"),
+                     h3("Dataset 1: Crime Rates"),
+                     p("The crime rates dataset relates to our problem domain as it is one of the specific factors we decided to analyze when it comes to the quality of life in a specific country.  The crime rates dataset includes data on the crime index for each country as well as that country's safety index. This dataset will help answer the research question about which country has the safest environment in regards to criminal activity."),
+                     h3("Dataset 2: Cost of Living"),
+                     p("The cost of living dataset relates to our problem domain as it's another one of the factors that we are analyzing to determine the quality of life in each country. The cost of living datasets are based off of New York City's cost of living. It will help answer the research question which country has the most affordable living environment"),
+                     h3("Dataset 3: Healthcare Index"),
+                     p("The healthcare dataset relates to our problem domain as it examines the healthcare aspect of the quality of life in a country. The dataset ranks each country on its healthcare index. This dataset will help answer which country is able to provide the best healthcare to its citizens by analyzing the healthcare indexes."),
+                     h3("Dataset 4: Healthcare Expenditure"),
+                     p("The healthcare expenditures relate to our problem domain because it helps answer the question which country has the most affordable healthcare. This dataset shows how much out of pocket expenditure for healthcare occurs in each country. The dataset and the healthcare index dataset together will help answer the question which countries have the most viable healthcare based on quality service and price."),
                      h2("Research Questions"),
                      p("How do crime rates correlate with quality of life index?"),
                      p("How does cost of living vs groceries have an impact on the quality of life?"),
@@ -90,8 +99,10 @@ navbarPage( theme = shinytheme("darkly"),
                      )),
             tabPanel("Summary Takeaways",
                      tags$img(src ="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2972&q=80", height = "400", width = "800"),
-                     h2("Three Summary Takeaways",
-                        h4("Our first takeaway will focus on the crime and safety index of the quality of life. Through the bar graph, we learned that Venezuela in South America has the highest crime rate. Knowing this, it allows us to analyze the correlation between how much crime vs. how safe it is. Generally, the lower the crime rate, the safer it is to live in. Though, this has a high crime rate, this does not reflect or paint the real situation of the nation, just something for the individuals to be cautious about because there may be other conditions that people are facing.")
+                     h2("Summary Takeaways",
+                        h4("Our first takeaway focuses on the crime and safety index of the quality of life. Through the bar graph, we learned that Venezuela in South America has the highest crime rate. Knowing this, it allows us to analyze the correlation between how much crime vs. how safe it is. Generally, the lower the crime rate, the safer it is to live in. Though, this has a high crime rate, this does not reflect or paint the real situation of the nation, just something for the individuals to be cautious about because there may be other conditions that people are facing."),
+                        h4("Through our study, we also noticed how most of the South American continents lacked infrastructure in order to provide easy access to healthcare. High crime rates were also another thing that was pretty consistent throughout most of those countries. This could indicate a lack of development in certain areas therefore affecting crucial things within society. This is something that we should be aware of and also understand that each country faces different challenges."),
+                        h4("Lastly,another takeaway we were able to learn is how crucial is it for civilians to be aware of their countries crime index, cost of living and healthcare access. These all play such a big role upon people’s lives and if they are not aware of these aspects, their quality of life can be altered. In order to maintain a good lifestyle you need to be informed about these things before you make a decision.")
                      )
                      
                      
@@ -149,6 +160,12 @@ navbarPage( theme = shinytheme("darkly"),
                      p("If we could leave our audience with one key point, learn from different information and be cautious of what is going on around you. There are many people around the world that are being concerned the people around them, their wellbeing, and the expenses in their country. The data is not meant to pinpoint specific data that may not accurately depict the reality in the country, but rather to inform, learn about different countries and possibly the right place, especially for people who are having concerns about how they live their life. It is merely a warning sign to the government that this may be a public policy priority. Just because some countries have greater crime rates, higher expenditures on groceries, and poor healthcare services does not imply to cause some sort of harm to the society, but to encourage people in their countries to be cautious about what’s happening around the world."),
                      p("In this project, we analyzed data that help us answer questions, such as how crime rates correlate with the quality-of-life index, how cost of living vs groceries has an impact on the quality of life and how healthcare has an impact on quality of life. So, this project was to show individuals from North, South, and Central America about finding a country that is the safest to live, in regard to crime rates, cost of living in groceries, and healthcare services. Finally, we were able to learn to analyze & real-world information by data wrangling and creating interactive visualizations to help us better understand this and create a meaningful impact for people who are trying find the right place for them to live in!"),
                      h2("References"),
+                     p("Cooper, W. (2022, October 14). Top 10 safest countries in the world for expats. William Russell. Retrieved October 31, 2022, from https://www.william-russell.com/blog/safest-countries-in-the-world-for-expats/"),
+                     p("Health care. Cost of Living. (2022). Retrieved October 30, 2022, from https://www.numbeo.com/health-care/rankings_by_country.jsp"),
+                     p("Numbeo. (2022). Crime. Cost of Living. Retrieved October 30, 2022, from https://www.numbeo.com/crime/rankings_by_country.jsp"),
+                     p("Numbeo. (2022). Cost of living. Cost of Living. Retrieved October 30, 2022, from https://www.numbeo.com/cost-of-living/rankings_by_country.jsp"),
+                     p("Out-of-pocket expenditure per capita on healthcare. Our World in Data. (2019). Retrieved October 31, 2022, from https://ourworldindata.org/grapher/out-of-pocket-expenditure-per-capita-on-healthcare")
+                     
                      
             ),
             
