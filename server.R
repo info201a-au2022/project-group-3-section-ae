@@ -126,6 +126,7 @@ shinyServer(function(input, output) {
     # y = "Cost of Living Index", 
     #title = paste("Cost of Food vs Cost of Living", input$region)) 
     plot_ly(type = 'scatter', mode = 'markers') %>%
+      layout(xaxis = list(title = "Groceries Index"), yaxis = list(title = "Cost of Living Index"), title = "Cost of Living vs. Groceries") %>%
       add_trace(plotData,
                 x = plotData$Groceries.Index, 
                 y = plotData$Cost.of.Living.Index,
