@@ -9,6 +9,7 @@ library(mapproj)
 
 final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
 #View(final_dataset)
+datasets <- read_csv("/Users/daphnigeorge/Downloads/Datasets - Sheet1.csv")
 
 #TODO
 data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
@@ -41,6 +42,9 @@ shinyServer(function(input, output) {
   output$selectRegion <- renderUI({
     selectInput("region", "Choose a region:", choices = unique(new_data$region))
     #output$value <- renderPrint({ input$region })
+  })
+  output$data <- renderTable({
+    datafilter <- subset(datasets, datasets$`Name of Data File` == input$dataset)
   })
   
   
