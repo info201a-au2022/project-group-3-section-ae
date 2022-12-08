@@ -87,7 +87,11 @@ navbarPage( theme = shinytheme("darkly"),
                        )
                      )),
             tabPanel("Summary Takeaways",
-                     h3("Three Summary Takeaways:")
+                     h2("Three Summary Takeaways:",
+                        
+                        h4("Our first takeaway will focus on the crime and safety index of the quality of life. Through the bar graph, we learned that Venezuela in South America has the highest crime rate. Knowing this, it allows us to analyze the correlation between how much crime vs. how safe it is. Generally, the lower the crime rate, the safer it is to live in. Though, this has a high crime rate, this does not reflect or paint the real situation of the nation, just something for the individuals to be cautious about because there may be other conditions that people are facing.")
+                        )
+                     
                      
             ),
             tabPanel("Report",
