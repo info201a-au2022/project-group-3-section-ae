@@ -6,17 +6,12 @@ library(plotly)
 library(maps)
 library(mapproj)
 library(readr)
-#install.packages("shinythemes")
 
+
+# These are all the datasets that are being used
 final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
-#View(final_dataset)
 datasets <- read_csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/Datasets%20-%20Sheet1.csv")
-
-#TODO
 data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
-world_coordinates <- map_data("world")
-world_coordinates <- rename(world_coordinates, Country = region)
-data <- inner_join(x = data, y = world_coordinates, by = "Country")
 df_crime <- select(final_dataset, 1,4,5)
 new_data <- read.csv ("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/Dataset%20with%20Regions%20-%20Sheet1.csv")
 df <- read.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv')
@@ -24,16 +19,14 @@ data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-grou
 data$Country[data$Country=="USA"]<-"United States"
 df <- rename(df, Country = COUNTRY)
 df <- inner_join(x = data, y = df, by = "Country")
-#View(df_crime)
 
-# Define server logic required to draw a bargraph
+#Server logic required to draw a bargraph, map and scatterplot
 shinyServer(function(input, output) {
   output$selectCountry1 <- renderUI({
     selectInput("country", "Choose a country:", choices = unique(df_crime$Country))
     
   })
   output$selectCountry <- renderUI({
-    #selectInput("Country", "Choose a Country:", choices = unique(data$Country))
     output$value <- renderPrint({ input$slider1 })
     
     
@@ -42,7 +35,6 @@ shinyServer(function(input, output) {
   })
   output$selectRegion <- renderUI({
     selectInput("region", "Choose a region:", choices = unique(new_data$region))
-    #output$value <- renderPrint({ input$region })
   })
   output$data <- renderTable({
     datafilter <- subset(datasets, datasets$`Name of Data File` == input$dataset)
@@ -72,7 +64,6 @@ shinyServer(function(input, output) {
       theme(plot.title = element_text(face="bold", size=20),
             axis.title = element_text(face="bold", size = 17),
             axis.text = element_text(size = 15))
-    #legend.title = element_text(face= "bold", size = 20)
   })
   
   
@@ -80,14 +71,7 @@ shinyServer(function(input, output) {
     barGraph()
   })
   
-  #secondchart map
-  
-  #output$selectCountry <- renderUI({
-  #selectInput("Country", "Choose a Country:", choices = unique(data$Country))
-  #output$value <- renderPrint({ input$slider1 })
-  
-  
-  #})
+ 
   
   plotMap <- reactive({
     country_selector <- df %>% 
@@ -125,17 +109,13 @@ shinyServer(function(input, output) {
     plotData <- new_data %>% 
       filter(region %in% input$region)
     
-    #ggplot(plotData, aes(x=Groceries.Index, y=Cost.of.Living.Index)) +
-    #geom_point() +
-    # labs(x = "Groceries Index",
-    # y = "Cost of Living Index", 
-    #title = paste("Cost of Food vs Cost of Living", input$region)) 
+     
     plot_ly(type = 'scatter', mode = 'markers') %>%
       layout(xaxis = list(title = "Groceries Index"), yaxis = list(title = "Cost of Living Index"), title = "Cost of Living vs. Groceries") %>%
       add_trace(plotData,
                 x = plotData$Groceries.Index, 
                 y = plotData$Cost.of.Living.Index,
-                text = plotData$Country,
+                text = paste0("Country: ", plotData$Country),
                 hoverinfo = 'text',
                 marker = list(color='green'),
                 showlegend = F
