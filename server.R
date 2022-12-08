@@ -5,11 +5,12 @@ library(dplyr)
 library(plotly)
 library(maps)
 library(mapproj)
+library(readr)
 #install.packages("shinythemes")
 
 final_dataset <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
 #View(final_dataset)
-datasets <- read_csv("/Users/daphnigeorge/Downloads/Datasets - Sheet1.csv")
+datasets <- read_csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/Datasets%20-%20Sheet1.csv")
 
 #TODO
 data <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-3-section-ae/main/data/New_final_dataset%20-%20Sheet1.csv")
